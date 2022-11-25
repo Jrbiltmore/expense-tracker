@@ -17,10 +17,10 @@
 
   --bg-color: #f6f6f6;
 
-  --emerald-green: #50C878;
+  --emerald-green: #50c878;
   --neon-red: #ff3131;
-  --neon-blue: #1F51FF;
-  --cadmium-red:#D22B2B;
+  --neon-blue: #1f51ff;
+  --cadmium-red: #d22b2b;
 
   --button1-bg: #323232;
   --button2-bg: #808080;
@@ -59,7 +59,7 @@ h3 {
 }
 
 h4 {
-  margin: 0;
+  margin-top: 5px;
   text-transform: uppercase;
 }
 
@@ -123,8 +123,7 @@ input[type="number"] {
   width: 100%;
 }
 
-.btn:focus,
-.delete-btn:focus {
+.btn:focus {
   outline: 0;
 }
 
@@ -153,22 +152,18 @@ input[type="number"] {
   border-right: 5px solid var(--neon-red);
 }
 
-.delete-btn {
+.delete-icon {
   cursor: pointer;
-  background-color: var(--cadmium-red);
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
+  width: 40px;
   position: absolute;
   top: 50%;
   left: 0;
+  padding: 2px 5px;
   transform: translate(-100%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.list li:hover .delete-btn {
+.list li:hover .delete-icon {
   opacity: 1;
 }
