@@ -1,19 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-
-import { icons } from "../constants";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import Transaction from "./Transaction";
 
 const TransactionList = () => {
+  const { transactions } = useContext(GlobalContext);
   return (
     <>
       <h3>Transaction History</h3>
       <ul id="list" className="list">
-        <li className="minus">
-          Cash <span>-$500</span>
-          <a>
-            <img className="delete-icon" src={icons.remove} />
-          </a>
-        </li>
+        {transactions.map((transaction) => (
+          <Transaction key={transaction.id} transaction={transaction} />
+        ))}
       </ul>
     </>
   );
