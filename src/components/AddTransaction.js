@@ -7,7 +7,7 @@ const AddTransaction = () => {
 
   const { addTransaction } = useContext(GlobalContext);
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
@@ -15,6 +15,8 @@ const AddTransaction = () => {
       amount,
     };
 
+    setPurpose("");
+    setAmount("");
     addTransaction(newTransaction);
   };
 
