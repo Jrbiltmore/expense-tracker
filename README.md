@@ -1,4 +1,4 @@
-# Portfolio Project
+# Expense Tracker
 
 Expense tracker using React JS.
 Implementation of concepts which are Components, Props and useState, useContext and useReducer.
